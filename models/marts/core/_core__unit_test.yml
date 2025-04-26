@@ -1,0 +1,13 @@
+# unit_tests:
+#   - name: test_is_valid_email
+#     description: "Valida que los emails sean correctos."
+#     model: users
+#     given:
+#       - input: ref('stg_users')
+#         rows:
+#           - {email: "test@example.com"}
+#           - {email: "fail_email"}
+#     expect:
+#       rows:
+#         - {email: "test@example.com", is_valid_email_address: true}
+#         - {email: "fail_email", is_valid_email_address: false}
